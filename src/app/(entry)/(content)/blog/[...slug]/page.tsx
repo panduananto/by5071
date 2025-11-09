@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { Author } from 'next/dist/lib/metadata/types/metadata-types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -46,7 +47,6 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 		metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
 		title: post.title,
 		description: post.description,
-		authors: post.authors,
 		openGraph: {
 			title: post.title,
 			description: post.description,
